@@ -41,7 +41,7 @@ resource "aws_subnet" "private_a1" {
 resource "aws_subnet" "private_a2" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = "10.0.12.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = "us-east-1b"
 
   tags = {
     Name = "public-app-subnet-az-2"
@@ -51,7 +51,7 @@ resource "aws_subnet" "private_a2" {
 resource "aws_subnet" "private_b1" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = "10.0.21.0/24"
-  availability_zone = "us-east-1b"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "public-db-subnet-az-1"
